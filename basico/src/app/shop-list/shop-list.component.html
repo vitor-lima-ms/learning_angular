@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Lista de compras</h1>
+
+    <form class="list-shop-form" #ngform="ngForm" (ngSubmit)="addItem()">
+        <input type="text" name="item-text" id="item-text" [(ngModel)]="item" placeholder="Insira o item aqui">
+        <input type="number" name="item-qtd" id="item-qtd" [(ngModel)]="qtd" placeholder="Insira a quantidade aqui">
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Item</th>
+                <th>Quantidade</th>
+                <th>Comprado?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of list; track item.id) {
+            <tr>
+                <td><span [ngClass]="{'purchased-item' : item.purchased}">{{ item.id }}</span></td>
+                <td><span [ngClass]="{'purchased-item' : item.purchased}">{{ item.itemName }}</span></td>
+                <td><span [ngClass]="{'purchased-item' : item.purchased}">{{ item.itemQtd }}</span></td>
+                <td><input type="checkbox" name="check" id="check" (click)="purchasedItem(item)"
+                        [checked]="item.purchased"></td>
+            </tr>
+            }
+            @empty {
+            <tr>
+                <td colspan="4"><b>Nenhum item adicionado!</b></td>
+            </tr>
+            }
+            <tr>
+                <td colspan="4"><button type="button" (click)="clearList()">Limpar</button></td>
+            </tr>
+            <!-- <tr *ngFor="let item of list">
+                <td>{{ item.id }}</td>
+                <td>{{ item.itemName }}</td>
+                <td>{{ item.itemQtd }}</td>
+                <td><input type="checkbox" name="check" id="check" (click)="purchasedItem(item)"></td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>

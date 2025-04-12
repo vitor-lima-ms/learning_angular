@@ -1,0 +1,41 @@
+<body>
+    <div class="calculator">
+        <div class="form-div">
+            <form #ngform="ngForm" (ngSubmit)="calcResult()">
+                <h2>Calculadora</h2>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="n1">Número 1: </label></td>
+                            <td><input type="number" name="n1" id="n1" [(ngModel)]="n1"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="n2">Número 2: </label></td>
+                            <td><input type="number" name="n2" id="n2" [(ngModel)]="n2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Somar</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="reset" (click)="clearResult()">Limpar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </form>
+        </div>
+        <div class="result-div" *ngIf="result">
+            <h2 id="result-header">O resultado é:</h2><br>
+        </div>
+        <div class="result-div">
+            @if(result){
+            <span class="result">{{ result }}</span>
+            }
+            @else {
+            <br>
+            <span>Seu resultado aparecerá aqui!</span>
+            }
+        </div>
+    </div>
+</body>

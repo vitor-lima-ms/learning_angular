@@ -1,0 +1,43 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    margin: 0.5em;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 2em;
+}
+
+table th, td {
+    padding: 0.5em;
+    border: 1px solid #000;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 100ms ease-in-out;
+}
+
+.purchased-item {
+    text-decoration: line-through;
+}

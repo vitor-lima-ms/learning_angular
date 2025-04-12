@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CalculatorComponent } from './calculator/calculator.component'
+import { ShopListComponent } from './shop-list/shop-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    ShopListComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
