@@ -2,3 +2,35 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#header-mb-20 {
+    margin-bottom: 1.25em;
+}
+
+.mb-20 {
+    margin-bottom: 1.25em;
+}
+
+.mt-20 {
+    margin-top: 1.25em;
+}
+
+.mt-40 {
+    margin-top: 2.5em;
+}
+
+.mt-60 {
+    margin-top: 3.75em;
+}
+
+.ml-5{
+    margin-left: 0.55em;
+}
+
+.ml-10{
+    margin-left: 0.625em;
+}
+
+.full-width {
+    width: 100%;
+}
